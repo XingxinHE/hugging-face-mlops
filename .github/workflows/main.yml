@@ -16,8 +16,8 @@ jobs:
       - name: Add remote 
         env:
           HF: ${{ secrets.HUGGING_FACE_DEPLOY_TOKEN }}
-        run: git remote add space https://huggingface.co/spaces/xingxin-he/hugging-face-demo
+        run: git remote add space https://xingxin-he:$HUGGING_FACE_DEPLOY_TOKEN@huggingface.co/spaces/xingxin-he/hugging-face-demo
       - name: Push to hub
         env:
           HF: ${{ secrets.HUGGING_FACE_DEPLOY_TOKEN }}
-        run: git push --force https://huggingface.co/spaces/xingxin-he/hugging-face-demo main
+        run: git push --force https://xingxin-he:$HUGGING_FACE_DEPLOY_TOKEN@huggingface.co/spaces/xingxin-he/hugging-face-demo main
